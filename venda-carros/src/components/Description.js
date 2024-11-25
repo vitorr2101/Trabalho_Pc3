@@ -10,7 +10,7 @@ function Description({ text }) {
 }
 
 const styles = {
-  container: { maxWidth: '600px', padding: '10px', textAlign: 'justify' },
+  container: { maxWidth: 'auto', paddingLeft: '30px', paddingRight: '30px', textAlign: 'justify', fontSize :'20px' },
 };
 
 export default Description;

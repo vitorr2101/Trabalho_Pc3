@@ -17,6 +17,7 @@ const styles = { // objeto de estilos, usa css
   nav: {
     display: 'flex',
     justifyContent: 'space-between',
+    fontSize: '30px',
     alignItems: 'center',
     padding: '10px 20px',
     backgroundColor: '#333',

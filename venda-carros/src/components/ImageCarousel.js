@@ -14,16 +14,18 @@ function ImageCarousel({ images }) {
 
   return (
     <div style={styles.carousel}>
-      <button onClick={handlePrev}>Anterior</button>
+      <button onClick={handlePrev} style = {styles.botao_ant}> anterior </button>
       <img src={images[currentIndex]} alt="Carro" style={styles.image} />
-      <button onClick={handleNext}>Próximo</button>
+      <button onClick={handleNext} style = {styles.botao_pro}> próxima </button>
     </div>
   );
 }
 
 const styles = {
   carousel: { display: 'flex', alignItems: 'center', gap: '10px' },
-  image: { width: '600px', height: 'auto' },
+  image: { width: '600px', height: '400px',  objectFit: 'contain' },
+  botao_ant: {borderRadius: '50px'},
+  botao_pro: {borderRadius: '50px'},
 };
 
 export default ImageCarousel;
