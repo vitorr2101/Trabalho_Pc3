@@ -1,14 +1,15 @@
 // components/NavBar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
     <nav style={styles.nav}>
       <img src="logo.jpeg" alt="Logo" style={styles.logo} />
-      <div style={styles.links}>
-        <a href="/">Página Inicial</a>
-        <a href="/contato">Contato</a>
-      </div>
+      <ul style={styles.navLinks}>
+        <li><Link to="/" style={styles.link}>Página Inicial</Link></li>
+        <li><Link to="/checkout" style={styles.link}>Finalizar Compra</Link></li>
+      </ul>
     </nav>
   );
 }
@@ -24,7 +25,15 @@ const styles = { // objeto de estilos, usa css
     color: '#fff',
   },
   logo: { width: '150px', borderRadius: '80px', } ,
-  links: { display: 'flex', gap: '20px' },
+  navLinks: {
+    listStyleType: 'none',
+    display: 'flex',
+    gap: '15px',
+  },
+  link: {
+    color: '#fff',
+    textDecoration: 'none',
+  },
 };
 
 export default NavBar;
